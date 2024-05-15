@@ -9,6 +9,13 @@ public class series {
     private String atoresDaSerie;
     private int temporadas;
 
+    public series(String nome, int dataLancamentoSerie) {
+        this.nomeSerie = nome;
+        this.dataLancamentoSerie = dataLancamentoSerie;
+    }
+
+
+
     public double getNotasSerie(){
         return notasSerie / avaliacaoSerie;
     }

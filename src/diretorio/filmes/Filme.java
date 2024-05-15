@@ -1,5 +1,7 @@
 package diretorio.filmes;
 
+import java.util.ArrayList;
+
 public class Filme {
     private String nomeFilme;
     private int dataLancamentoFilme;
@@ -7,6 +9,10 @@ public class Filme {
     private double avaliacaoFilme;
     private double notasFilme;
     private String atoresDoFilme;
+
+    public Filme(String nome) {
+        this.setNomeFilme(nome);
+    }
 
     public double getNotasFilme(){
         return notasFilme / avaliacaoFilme;
@@ -29,9 +35,9 @@ public class Filme {
     }
 
     public void exibeFichaTecnica(){
-        System.out.println("\n\n" +"Nome do diretorio.filmes.Filme: " + nomeFilme);
-        System.out.println("Data de Lançamento do diretorio.filmes.Filme: " + dataLancamentoFilme);
-        System.out.println("Avaliação Geral do diretorio.filmes.Filme: " + getNotasFilme());
+        System.out.println("\n\n" +"Nome do Filme: " + nomeFilme);
+        System.out.println("Data de Lançamento do Filme: " + dataLancamentoFilme);
+        System.out.println("Avaliação Geral do Filme: " + getNotasFilme());
         System.out.println("Atores do filme: " + atoresDoFilme);
         System.out.println("Diretor do filme: " + diretorFilme );
     }
@@ -41,9 +47,18 @@ public class Filme {
         avaliacaoFilme++;
     }
 
-  /*  FOI INTRODUZIDO DIRETO NO GET
+    public String getNomeFilme() {
+        return nomeFilme;
+    }
+
+    /*  FOI INTRODUZIDO DIRETO NO GET
   double obeterMedia(){
         return notasFilme / avaliacaoFilme;
     }
     */
+
+    @Override
+    public String toString() {
+        return this.nomeFilme;
+    }
 }
